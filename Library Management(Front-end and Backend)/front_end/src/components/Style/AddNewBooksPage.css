@@ -1,0 +1,195 @@
+/* Overall Page Layout */
+.add-new-books-page {
+    margin-left: 20vw; /* Default for desktop with sidebar */
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+    background-image: url(../../assets/Landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Ensures proper centering */
+}
+
+/* Form Container */
+.form-container1 {
+    width: 100%;
+    max-width: 450px !important;
+    height: 550px;  /* Fixed height */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+/* Form Scrollbar Hidden */
+.form-container1::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.form-container1 {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Form Title */
+.form-title {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    text-align: center;
+    color: #333 !important;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #7E5CAD !important;
+}
+
+/* File Input */
+/* .form-group input[type="file"] { */
+    /* border: none; */
+    /* padding: 0; */
+/* } */
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #7E5CAD !important;
+    border: 2px solid #7E5CAD !important;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: white !important;
+    color: #7E5CAD !important;
+}
+
+/* ✅ Responsive Design for Tablets (max-width: 768px) */
+/* ✅ Responsive Styles for 426px to 968px */
+@media (min-width: 426px) and (max-width: 968px) {
+    .add-new-books-page {
+        margin-left: 25vw !important; /* Adjust sidebar space */
+        padding: 20px 15px !important;
+    }
+
+    .form-container1 {
+        width: 60% !important; /* Slightly wider for better form layout */
+        height: 450px !important; /* Adjust height dynamically */
+        padding: 30px 20px !important;
+    }
+
+    .form-title {
+        font-size: 24px !important;
+    }
+
+    .form-group label {
+        font-size: 16px !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 15px !important;
+        padding: 10px !important;
+    }
+
+    .submit-btn {
+        font-size: 16px !important;
+        padding: 12px !important;
+    }
+}
+
+/* ✅ Responsive Design for Small Screens (425px to 320px) */
+@media (max-width: 425px) {
+    .add-new-books-page {
+        margin-left: 40vw;
+        padding: 15px 10px;
+    }
+
+    .form-container1 {
+        width: 55% !important;
+        height: 500px !important;
+        padding: 20px 15px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+/* ✅ Responsive Design for Extra Small Screens (320px and below) */
+@media (max-width: 320px) {
+    .form-title {
+        font-size: 18px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* 7E5CAD */

@@ -1,0 +1,242 @@
+.BorrowHistoryPage-container {
+    padding: 40px !important;
+    background: #bfa9df;
+    min-height: 100vh;
+    margin-left: 20vw !important; /* Adjust for sidebar */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Ensures no horizontal scrolling */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 29px !important;
+    color: black !important;
+  }
+  
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables scrolling only inside the table if needed */
+  }
+  
+  .borrow-history-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+  
+  .borrow-history-table th,
+  .borrow-history-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+  
+  .borrow-history-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: center !important;
+  }
+  
+  .borrow-history-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .bor-history {
+    display: flex;
+    gap: 10px; /* Adds space between the buttons */
+}
+
+.approve-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+}
+
+.approve-btn:first-child {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+}
+
+.approve-btn:first-child:hover {
+    background-color: green;
+    color: white;
+}
+
+.approve-btn-return {
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+}
+
+.approve-btn-return:hover {
+  background-color: green;
+  color: white;
+}
+
+.approve-btn-1 {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+}
+
+.approve-btn-1:last-child {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+.approve-btn-1:last-child:hover {
+    background-color: red;
+    color: white;
+}
+
+  
+  /* ✅ Responsive for Tablets & Small Laptops (1024px & below) */
+  @media (max-width: 1024px) {
+    
+    h2 {
+      font-size: 22px;
+    }
+    
+    .borrow-history-table th,
+    .borrow-history-table td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .approve-btn {
+      padding: 6px 10px;
+    }
+  }
+  
+  /* ✅ Responsive for Tablets (768px & below) */
+  @media (max-width: 768px) {
+    .BorrowHistoryPage-container {
+      margin-left: 25vw !important; /* Keep sidebar margin */
+      padding: 30px !important; /* Reduce padding for better spacing */
+  }
+    .borrow-history-table th,
+    .borrow-history-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .approve-btn {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 426px) and (max-width: 767px) {
+
+    /* Adjust the container */
+    .BorrowHistoryPage-container {
+        margin-left: 30vw !important; /* Keep sidebar margin */
+        padding: 20px !important; /* Reduce padding for better spacing */
+    }
+  
+    /* Adjust heading size */
+    h2 {
+        font-size: 24px !important;
+    }
+  
+    /* Ensure table is scrollable */
+    .table-wrapper {
+        overflow-x: auto !important;
+    }
+  
+    /* Table adjustments */
+    .borrow-history-table {
+        width: 100%;
+        font-size: 14px !important;
+    }
+  
+    .borrow-history-table th,
+    .borrow-history-table td {
+        padding: 10px !important;
+        font-size: 13px !important;
+        white-space: nowrap !important; /* Prevent wrapping */
+    }
+  
+    /* Adjust button size */
+    .approve-btn {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+    }
+  }
+  
+ /* ✅ Responsive for Mobile Devices (425px to 320px) */
+@media (max-width: 425px) {
+    .BorrowHistoryPage-container {
+        margin-left: 40vw !important; /* Remove sidebar margin for mobile */
+        padding: 8px !important;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto; /* Allow scrolling inside table, not entire page */
+    }
+
+    .borrow-history-table,
+    .borrow-history-table thead,
+    .borrow-history-table tbody,
+    .borrow-history-table th,
+    .borrow-history-table td,
+    .borrow-history-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .borrow-history-table thead {
+        display: none; /* Hide table header for compact view */
+    }
+
+    .borrow-history-table tr {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        background: white;
+        padding: 10px;
+    }
+
+    .borrow-history-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px;
+        font-size: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .borrow-history-table td:last-child {
+        border-bottom: none;
+    }
+
+    .approve-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        padding: 4px;
+    }
+}

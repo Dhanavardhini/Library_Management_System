@@ -1,0 +1,333 @@
+/* Overall Container */
+.book-list-page {
+    margin-left: 20vw; /* Adjust based on sidebar width */
+    padding: 40px 20px;
+    min-height: 100vh;
+    background-color:#bfa9df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Grid Container */
+  .book-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+  }
+  
+  /* Book Card */
+  .book-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Book Image */
+  .book-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Book Name */
+  .book-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 12px 0;
+  }
+  
+  /* Edit Button */
+  .edit-btn {
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #7E5CAD;
+    border: 2px solid #7E5CAD !important;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .edit-btn:hover {
+    background: white;
+    color: #7E5CAD !important;
+  }
+  
+ 
+  
+ /* ✅ Responsive Styles for 426px to 968px */
+@media (min-width: 426px) and (max-width: 766px) {
+
+  /* Adjusts the book list page layout */
+  .book-list-page {
+      margin-left: 20vw !important;
+      padding: 30px 15px !important;
+  }
+
+  /* Adjust grid layout for medium screens */
+  .book-list-container {
+      grid-template-columns: repeat(1, 1fr) !important; /* 2 books per row */
+      gap: 15px !important;
+  }
+
+  /* Book card adjustments */
+  .book-card {
+      padding: 12px !important;
+  }
+
+  .book-image {
+      height: 180px !important;
+  }
+
+  .book-name {
+      font-size: 16px !important;
+      margin: 10px 0 !important;
+  }
+
+  .edit-btn {
+      font-size: 15px !important;
+      padding: 10px !important;
+      width: 90% !important;
+  }
+}
+
+  
+  @media (max-width: 425px) {
+    .book-list-page {
+        margin-left: 34vw !important;
+    }
+    .book-list-container {
+      grid-template-columns: 1fr; /* 1 card per row */
+    }
+  }
+
+  /* ✅ Responsive Styles for 426px to 968px */
+@media (min-width: 767px) and (max-width: 968px) {
+
+  /* Adjusts the book list page layout */
+  .book-list-page {
+      margin-left: 20vw !important;
+      padding: 30px 45px !important;
+  }
+
+  /* Adjust grid layout for medium screens */
+  .book-list-container {
+      grid-template-columns: repeat(2, 1fr) !important; /* 2 books per row */
+      gap: 15px !important;
+  }
+
+  
+}
+
+  
+
+  /* ------------------------------------ */
+
+/* Overall Container */
+.BpEdit-container {
+  margin-left: 20vw; /* Adjust based on sidebar width */
+  min-height: 100vh;
+  background-image: url(../../assets/Addbook.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center;  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Form Container */
+.edit-form-container {
+    width: 100%;
+    max-width: 450px !important;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Back Button */
+.back-btnbp{
+  position: fixed; /* Positions the button relative to the nearest positioned ancestor */
+  top: 20px; /* Adjusts the top margin */
+  right: 20px; /* Moves the button to the right */
+  background-color:white !important;
+  color:black;
+  border: none !important;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+  border-radius: 5px;
+}
+
+.back-btnbp:hover {
+  background-color: #7E5CAD!important;
+  color:white  !important;
+  border: 2px solid #7E5CAD !important;
+  font-weight: bold;
+}
+
+
+.back-icon {
+    font-size: 24px;
+    /* margin-right: 8px; */
+}
+
+/* Form */
+.edit-form{
+    padding: 30px 25px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px; /* Limit height with scroll */
+}
+
+/* Form Scrollbar Hidden */
+.edit-form::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.edit-form {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Title */
+.form-title-1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333 !important;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+.edit-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.edit-form .form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.edit-form .form-group input,
+.edit-form .form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.edit-form .form-group input:focus,
+.edit-form .form-group textarea:focus {
+    border-color: #7E5CAD;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #7E5CAD;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #7E5CAD;
+}
+
+@media  (max-width: 768px) {
+  .BpEdit-container {
+    margin-left: 20vw;
+    height: 0px !important;
+  }
+  .edit-form-container {
+    width: 100% !important;
+    max-width: 350px !important;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+}
+}
+@media (min-width: 426px) and (max-width: 767px) {
+  .BpEdit-container {
+    margin-left: 30vw;
+    height: 0px !important;
+  }
+  .edit-form-container {
+    width: 100% !important;
+    max-width: 300px !important;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+}
+}
+
+@media (max-width: 425px) {
+  .BpEdit-container {
+      margin-left: 40vw;
+      padding: 10px 5px;
+
+  }
+  .back-btnbp {
+    position: fixed; /* Positions the button relative to the nearest positioned ancestor */
+    top: 5px; /* Adjusts the top margin */
+    right: 20px; /* Moves the button to the right */
+    background-color:white !important;
+    color:black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    border-radius: 5px;
+  }
+  .edit-form-container {
+    margin-top: 20px !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+}
+  

@@ -1,0 +1,170 @@
+/* ✅ Full Page Centered Container */
+.form-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+.UserBookListRegPage-container{
+    background-image: url(../../assets/Landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* ✅ Back Button Styling */
+.back-btn-1{
+    position: fixed; /* Positions the button relative to the nearest positioned ancestor */
+    top: 20px; /* Adjusts the top margin */
+    right: 20px; /* Moves the button to the right */
+    background-color:white !important;
+    color:black;
+    border: none !important;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    border-radius: 5px;
+  }
+  
+  .back-btn-1:hover {
+    background-color: #7E5CAD!important;
+    color:white  !important;
+    border: 2px solid #7E5CAD !important;
+    font-weight: bold;
+  }
+  
+  
+  .back-icon {
+      font-size: 24px;
+      /* margin-right: 8px; */
+  }
+
+
+/* ✅ Centered Form Container */
+/* ✅ Make form scrollable without showing scrollbar */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 570px !important; /* Ensure height remains fixed */
+    overflow-y: auto; /* Enables scrolling inside */
+}
+
+/* ✅ Hide scrollbar inside form container */
+.form-container::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+
+.form-container {
+    scrollbar-width: none; /* Hides scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+}
+
+
+.UserBookListRegPage-title{
+    margin-bottom: 20px;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+}
+
+/* ✅ Form Styling */
+.book-reg-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+    .form-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        height: 470px !important;
+    }
+}
+@media (max-width: 425px) {
+    .form-container {
+        width: 100%;
+        min-width: 300px !important;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        height: 420px !important;
+        
+    }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+    .form-container {
+        width: 80%; /* Slightly wider form for medium screens */
+        max-width: 450px; /* Increase max-width for better spacing */
+        padding: 25px;
+        height: 520px !important; /* Adjust height */
+    }
+
+    .UserBookListRegPage-title {
+        font-size: 24px !important; /* Slightly larger font */
+    }
+
+    input, select {
+        font-size: 15px; /* Increase input text size for readability */
+        padding: 12px;
+    }
+
+    .submit-btn {
+        font-size: 17px;
+        padding: 12px;
+    }
+}
